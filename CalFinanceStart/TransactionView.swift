@@ -13,38 +13,14 @@ struct TransactionView: View {
     var transaction: CFTransaction
     
     var body: some View {
-        //TODO: Implement TransactionView body
-        Text("TransactionView")
+        // TODO: 4A. Implement TransactionView
+        Text("DELETE ME")
     }
     
-    //Credit card number at the top
-    private var creditCardNumberSection: some View {
-        //TODO: Implement creditCardNumberSection
-        Text("creditCardNumberSection")
-    }
+    // MARK: - Helper Functions
     
-    //Transaction type image
-    private var imageSection: some View {
-        //TODO: Implement imageSection
-        Text("imageSection")
-    }
-    
-    //"Transfer", "Deposit", "Purchase"
-    private var transactionNameSection: some View {
-        //TODO: Implement transactionNameSection
-        Text("transactionNameSection")
-    }
-    
-    //Right hand side transaction information
-    //HINT: Use BalanceAmountView here!
-    private var infoSection: some View {
-        //TODO: Implement infoSection
-        Text("infoSection")
-    }
-    
-    //MARK: - Helper Functions
-    //Don't forget to use these functions!! They are indeed quite handy.
-    //💡 TIP: To view these function's documentation in a more prettier way, <Option> click on the function names.
+    // Don't forget to use these functions!! They are indeed quite handy.
+    // 💡 TIP: To view these function's documentation in a more prettier way, <Option> click on the function names.
     
     /// For the current transaction, get the associated color. For example, if the transaction is of type `transfer`, &nbsp; `getTransactionColor()` returns `Color.green`.
     /// - Returns: The associated transaction color.
@@ -73,29 +49,27 @@ struct TransactionView: View {
     }
 }
 
-struct TransactionViewPreviewProvider: PreviewProvider {
-    static var cardManager = CardManager()
-    static var previews: some View {
-        VStack(spacing: 30) {
-            VStack(alignment: .leading){
-                Text("Purchase Transaction View:")
-                    .bold()
-                TransactionView(transaction: CFTransaction(type: .purchase, changeAmount: -10000, date: Date(), associatedCardNumber: cardManager.createCreditCardNumber()))
-            }
-            
-            VStack(alignment: .leading) {
-                Text("Transfer Transaction View:")
-                    .bold()
-                TransactionView(transaction: CFTransaction(type: .transfer, changeAmount: -10000, date: Date(), associatedCardNumber: cardManager.createCreditCardNumber()))
-            }
-            
-            VStack(alignment: .leading) {
-                Text("Deposit Transaction View:")
-                    .bold()
-                TransactionView(transaction: CFTransaction(type: .deposit, changeAmount: -10000, date: Date(), associatedCardNumber: cardManager.createCreditCardNumber()))
-            }
+#Preview {
+    let cardManager = CardManager()
+    return VStack(alignment: .leading, spacing: 30) {
+        VStack(alignment: .leading){
+            Text("Purchase Transaction View:")
+                .bold()
+            TransactionView(transaction: CFTransaction(type: .purchase, changeAmount: -10000, date: Date(), associatedCardNumber: cardManager.createCreditCardNumber()))
         }
-        .padding()
+        
+        VStack(alignment: .leading) {
+            Text("Transfer Transaction View:")
+                .bold()
+            TransactionView(transaction: CFTransaction(type: .transfer, changeAmount: -10000, date: Date(), associatedCardNumber: cardManager.createCreditCardNumber()))
+        }
+        
+        VStack(alignment: .leading) {
+            Text("Deposit Transaction View:")
+                .bold()
+            TransactionView(transaction: CFTransaction(type: .deposit, changeAmount: -10000, date: Date(), associatedCardNumber: cardManager.createCreditCardNumber()))
+        }
     }
+    .padding()
 }
 

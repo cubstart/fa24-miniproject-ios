@@ -10,7 +10,6 @@ import SwiftUI
 /// NOT NEEDED IN HW
 /// - This is the main view titled `Cards`. From here, we present ``ManageCardsView`` and ``AddNewCardView``. We also display the scrolling list of ``CreditCardView``s at the top and all ``CFCard``'s ``CFTransaction``s at the bottom.
 struct MyCardsView: View {
-    @Namespace private var animation
     @State private var cardManager = CardManager()
     @State private var isPresentingManageCardsSheet = false
     @State private var isPresentingAddNewCardView = false
@@ -20,7 +19,7 @@ struct MyCardsView: View {
         NavigationStack {
             VStack(alignment: .leading) {
                 creditCardsView
-                transactionsView
+                TransactionListView(cardManager: cardManager, isTransactionsListExpanded: $isTransactionsListExpanded)
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             .navigationTitle("Cards")
@@ -43,8 +42,7 @@ struct MyCardsView: View {
                 ManageCardsView(cardManager: cardManager)
             }
             .fullScreenCover(isPresented: $isTransactionsListExpanded) {
-                transactionsView
-                    .padding()
+                TransactionListView(cardManager: cardManager, isTransactionsListExpanded: $isTransactionsListExpanded)
             }
             .sheet(isPresented: $isPresentingAddNewCardView) {
                 AddNewCardView(cardManager: cardManager)
@@ -54,7 +52,7 @@ struct MyCardsView: View {
     
     private var creditCardsView: some View {
         TabView {
-            ForEach(cardManager.getCards(), id: \.id) { card in
+            ForEach(cardManager.cards, id: \.id) { card in
                 CreditCardView(card: card)
                     .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
             }
@@ -64,9 +62,27 @@ struct MyCardsView: View {
         .safeAreaPadding(.horizontal, 10)
         .frame(height: 290)
     }
+}
+
+// MARK: - TransactionListView
+
+struct TransactionListView: View {
+    var cardManager: CardManager
     
-    @ViewBuilder
-    private var transactionsView: some View {
+    @Binding var isTransactionsListExpanded: Bool
+    
+    var body: some View {
+        VStack {
+            headerView
+            
+            Spacer()
+            
+            // TODO: 5A. Implement the Transaction List
+            Text("DELETE ME")
+        }
+    }
+    
+    private var headerView: some View {
         HStack {
             Text("Transactions")
                 .font(.title)
@@ -83,20 +99,7 @@ struct MyCardsView: View {
                     .font(.system(size: 20))
             }
         }
-        
-        Spacer()
-        
-        List {
-            ForEach(cardManager.getAllTransactions()) { transaction in
-                TransactionView(transaction: transaction)
-                    .listRowSeparator(.hidden)
-                    .listRowBackground(Color.clear)
-            }
-        }
-        .scrollContentBackground(.hidden)
-        .padding(EdgeInsets(top: 0, leading: -30, bottom: 0, trailing: -30))
-        .scrollContentBackground(.hidden)
-        .matchedGeometryEffect(id: "transactions-list", in: animation)
+        .padding()
     }
 }
 

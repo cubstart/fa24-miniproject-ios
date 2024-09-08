@@ -32,19 +32,18 @@ struct CreditCardView: View {
     }
     
     private var headerSection: some View {
-        //TODO: Implement headerSection
-        Text("headerSection")
+        // TODO: 2A. HeaderSection Walkthrough
+        Text("DELETE ME")
     }
     
     private var balanceSection: some View {
-        //TODO: Implement balanceSection
-        //HINT: Use BalanceAmountView here! 
-        Text("balanceSection")
+        // TODO: 2B. Implement balanceSection
+        Text("DELETE ME")
     }
     
     private var visaSection: some View {
-        //TODO: Implement visaSection
-        Text("visaSection")
+        // TODO: 2C. Implement visaSection
+        Text("DELETE ME")
     }
 }
 

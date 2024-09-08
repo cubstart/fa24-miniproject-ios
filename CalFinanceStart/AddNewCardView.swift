@@ -44,14 +44,14 @@ struct AddNewCardView: View {
         }
     }
     
-    //TODO: Implement generateCreditCardNumberButton
-    private var generateCreditCardNumberButton: some View {
-        Text("generateCreditCardNumberButton")
+    private var addCreditCardButton: some View {
+        // TODO: 3A. Implement addCreditCardButton
+        Text("DELETE ME")
     }
     
-    //TODO: Implement addCreditCardButton 
-    private var addCreditCardButton: some View {
-        Text("addCreditCardButton")
+    private var generateCreditCardNumberButton: some View {
+        // TODO: 3B. Implement generateCreditCardNumberButton
+        Text("DELETE ME")
     }
     
     private func generateCreditCardNumber() {

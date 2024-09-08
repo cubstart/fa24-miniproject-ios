@@ -15,6 +15,7 @@ struct BalanceAmountView: View {
     
     var body: some View {
         Text("\(amount < 0 ? "-" : "+") $\(abs(amount))")
+            .contentTransition(.numericText())
     }
 }
 

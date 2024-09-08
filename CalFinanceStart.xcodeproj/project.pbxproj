@@ -9,32 +9,32 @@
 /* Begin PBXBuildFile section */
 		E81E335B2B70B4CE00374716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81E335A2B70B4CE00374716 /* Assets.xcassets */; };
 		E81E335E2B70B4CE00374716 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81E335D2B70B4CE00374716 /* Preview Assets.xcassets */; };
-		E81E336A2B70B4E800374716 /* BalanceAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33642B70B4E800374716 /* BalanceAmountView.swift */; };
-		E81E336B2B70B4E800374716 /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33652B70B4E800374716 /* CardManager.swift */; };
-		E81E336C2B70B4E800374716 /* AddNewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33662B70B4E800374716 /* AddNewCardView.swift */; };
-		E81E336D2B70B4E800374716 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33672B70B4E800374716 /* CreditCardView.swift */; };
-		E81E336E2B70B4E800374716 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33682B70B4E800374716 /* Card.swift */; };
-		E81E33742B70B4EF00374716 /* Ext+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33702B70B4EE00374716 /* Ext+View.swift */; };
 		E81E33752B70B4EF00374716 /* CalFinanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33712B70B4EF00374716 /* CalFinanceApp.swift */; };
-		E81E33762B70B4EF00374716 /* MyCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33722B70B4EF00374716 /* MyCardsView.swift */; };
-		E81E33772B70B4EF00374716 /* ManageCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33732B70B4EF00374716 /* ManageCardsView.swift */; };
-		E81E33792B70B62B00374716 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81E33692B70B4E800374716 /* TransactionView.swift */; };
+		E89E27132C8CE4490017DDFA /* CardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E270C2C8CE4480017DDFA /* CardManager.swift */; };
+		E89E27142C8CE4490017DDFA /* AddNewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E270D2C8CE4480017DDFA /* AddNewCardView.swift */; };
+		E89E27152C8CE4490017DDFA /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E270E2C8CE4480017DDFA /* CreditCardView.swift */; };
+		E89E27162C8CE4490017DDFA /* MyCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E270F2C8CE4490017DDFA /* MyCardsView.swift */; };
+		E89E27172C8CE4490017DDFA /* BalanceAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E27102C8CE4490017DDFA /* BalanceAmountView.swift */; };
+		E89E27182C8CE4490017DDFA /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E27112C8CE4490017DDFA /* TransactionView.swift */; };
+		E89E27192C8CE4490017DDFA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E27122C8CE4490017DDFA /* Card.swift */; };
+		E89E271C2C8CE45F0017DDFA /* ManageCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E271A2C8CE45F0017DDFA /* ManageCardsView.swift */; };
+		E89E271D2C8CE45F0017DDFA /* Ext+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E271B2C8CE45F0017DDFA /* Ext+View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E81E33532B70B4CD00374716 /* CalFinanceStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalFinanceStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81E335A2B70B4CE00374716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81E335D2B70B4CE00374716 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E81E33642B70B4E800374716 /* BalanceAmountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceAmountView.swift; sourceTree = "<group>"; };
-		E81E33652B70B4E800374716 /* CardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
-		E81E33662B70B4E800374716 /* AddNewCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewCardView.swift; sourceTree = "<group>"; };
-		E81E33672B70B4E800374716 /* CreditCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
-		E81E33682B70B4E800374716 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		E81E33692B70B4E800374716 /* TransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
-		E81E33702B70B4EE00374716 /* Ext+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+View.swift"; sourceTree = "<group>"; };
 		E81E33712B70B4EF00374716 /* CalFinanceApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalFinanceApp.swift; sourceTree = "<group>"; };
-		E81E33722B70B4EF00374716 /* MyCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCardsView.swift; sourceTree = "<group>"; };
-		E81E33732B70B4EF00374716 /* ManageCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageCardsView.swift; sourceTree = "<group>"; };
+		E89E270C2C8CE4480017DDFA /* CardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardManager.swift; sourceTree = "<group>"; };
+		E89E270D2C8CE4480017DDFA /* AddNewCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewCardView.swift; sourceTree = "<group>"; };
+		E89E270E2C8CE4480017DDFA /* CreditCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
+		E89E270F2C8CE4490017DDFA /* MyCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCardsView.swift; sourceTree = "<group>"; };
+		E89E27102C8CE4490017DDFA /* BalanceAmountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceAmountView.swift; sourceTree = "<group>"; };
+		E89E27112C8CE4490017DDFA /* TransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		E89E27122C8CE4490017DDFA /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E89E271A2C8CE45F0017DDFA /* ManageCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageCardsView.swift; sourceTree = "<group>"; };
+		E89E271B2C8CE45F0017DDFA /* Ext+View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ext+View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +67,12 @@
 		E81E33552B70B4CD00374716 /* CalFinanceStart */ = {
 			isa = PBXGroup;
 			children = (
-				E81E33682B70B4E800374716 /* Card.swift */,
-				E81E33652B70B4E800374716 /* CardManager.swift */,
-				E81E33672B70B4E800374716 /* CreditCardView.swift */,
-				E81E33662B70B4E800374716 /* AddNewCardView.swift */,
-				E81E33692B70B4E800374716 /* TransactionView.swift */,
-				E81E33642B70B4E800374716 /* BalanceAmountView.swift */,
+				E89E27122C8CE4490017DDFA /* Card.swift */,
+				E89E270C2C8CE4480017DDFA /* CardManager.swift */,
+				E89E270E2C8CE4480017DDFA /* CreditCardView.swift */,
+				E89E270D2C8CE4480017DDFA /* AddNewCardView.swift */,
+				E89E27112C8CE4490017DDFA /* TransactionView.swift */,
+				E89E270F2C8CE4490017DDFA /* MyCardsView.swift */,
 				E81E33782B70B4FE00374716 /* SupportingFiles */,
 				E81E335C2B70B4CE00374716 /* Preview Content */,
 			);
@@ -91,9 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				E81E33712B70B4EF00374716 /* CalFinanceApp.swift */,
-				E81E33702B70B4EE00374716 /* Ext+View.swift */,
-				E81E33732B70B4EF00374716 /* ManageCardsView.swift */,
-				E81E33722B70B4EF00374716 /* MyCardsView.swift */,
+				E89E271B2C8CE45F0017DDFA /* Ext+View.swift */,
+				E89E271A2C8CE45F0017DDFA /* ManageCardsView.swift */,
+				E89E27102C8CE4490017DDFA /* BalanceAmountView.swift */,
 				E81E335A2B70B4CE00374716 /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
@@ -169,16 +169,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E81E33742B70B4EF00374716 /* Ext+View.swift in Sources */,
-				E81E33762B70B4EF00374716 /* MyCardsView.swift in Sources */,
-				E81E33772B70B4EF00374716 /* ManageCardsView.swift in Sources */,
+				E89E271C2C8CE45F0017DDFA /* ManageCardsView.swift in Sources */,
+				E89E27162C8CE4490017DDFA /* MyCardsView.swift in Sources */,
+				E89E271D2C8CE45F0017DDFA /* Ext+View.swift in Sources */,
+				E89E27132C8CE4490017DDFA /* CardManager.swift in Sources */,
+				E89E27152C8CE4490017DDFA /* CreditCardView.swift in Sources */,
 				E81E33752B70B4EF00374716 /* CalFinanceApp.swift in Sources */,
-				E81E336E2B70B4E800374716 /* Card.swift in Sources */,
-				E81E336A2B70B4E800374716 /* BalanceAmountView.swift in Sources */,
-				E81E336B2B70B4E800374716 /* CardManager.swift in Sources */,
-				E81E33792B70B62B00374716 /* TransactionView.swift in Sources */,
-				E81E336D2B70B4E800374716 /* CreditCardView.swift in Sources */,
-				E81E336C2B70B4E800374716 /* AddNewCardView.swift in Sources */,
+				E89E27182C8CE4490017DDFA /* TransactionView.swift in Sources */,
+				E89E27172C8CE4490017DDFA /* BalanceAmountView.swift in Sources */,
+				E89E27142C8CE4490017DDFA /* AddNewCardView.swift in Sources */,
+				E89E27192C8CE4490017DDFA /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +324,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = justinwong.CalFinanceStart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -353,7 +353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = justinwong.CalFinanceStart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

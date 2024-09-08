@@ -9,11 +9,11 @@ import SwiftUI
 /// A class than manages all of the generation and tracking of cards and transactions as well as their respective logic.
 @Observable class CardManager {
     /// All the credit cards that ``CardManager`` manages. An array of ``CFCard``s.
-    private var cards = [CFCard]()
+    var cards = [CFCard]()
     /// All the transactions from all cards. An array of ``CFTransaction``.
     /// - This is a `computed property` which is like special variable in the sense that it is derived from some computation from other properties and methods.
     /// - In this case, we are aggregating all the ``CFTransaction``s from `cards` together. Whenever `cards` changes, `allTransactions` will reflect any necessary changes! So cool 😎!
-    private var allTransactions: [CFTransaction] {
+    var allTransactions: [CFTransaction] {
         return cards.flatMap { $0.transactions }
     }
     
@@ -45,22 +45,8 @@ import SwiftUI
         "Ava Scott"
     ]
     
-    //MARK: - Getters and Setters
-    /// A "getter" for `cards`.
-    /// - Returns: The `cards` instance variable.
-    /// - Since `cards`'s access level is `private` we need to use a "getter" to access the property/ instance variable.
-    func getCards() -> [CFCard] {
-        return cards
-    }
     
-    /// A "getter" for `allTransactions`.
-    /// - Returns: The `allTransactions` instance variable.
-    /// - Since `allTransactions`'s access level is `private` we need to use a "getter" to access the property/ instance variable.
-    func getAllTransactions() -> [CFTransaction] {
-        return allTransactions
-    }
-    
-    //MARK: - Generation Logic
+    // MARK: - Generation Logic
     /// Generate a given number of cards.
     /// - Parameter count: Number of cards to generate.
     /// - Returns: An array of ``CFCard``.
@@ -72,35 +58,30 @@ import SwiftUI
         return generatedCards
     }
     
+    /// Generate a random date between a given interval.
+    /// - Parameters:
+    ///   - startDate: The start date (inclusive).
+    ///   - endDate: The end date (inclusive)
+    /// - Returns: The random ``Date``.
+    private func randomDateInRange() -> Date {
+        let date10000DaysAgo = Date(timeIntervalSinceNow: -86400 * 10000)
+        let now = Date()
+        let timeInterval = TimeInterval.random(in: date10000DaysAgo.timeIntervalSince1970...now.timeIntervalSince1970)
+        return Date(timeIntervalSince1970: timeInterval)
+    }
+    
+    
+    // MARK: - Task 1: Feeling Swifty >>>>>>
+    
     /// Generate an array of transactions.
     /// - Parameters:
     ///   - maxCount: The maximum number of transactions to generate between 1 to ``maxCount``
     ///   - cardNumber: The associated card number that the transactions belong to.
     /// - Returns: An array of ``CFTransactions``.
     private func generateTransactions(withMax maxCount: Int, for cardNumber: String) -> [CFTransaction] {
-        var generatedTransactions = [CFTransaction]()
-        let randomCount = Int.random(in: 1...maxCount)
-        for _ in 0...randomCount {
-            let transactionTypes = CFTransaction.CFTransactionType.allCases
-            let randomTransactionType = transactionTypes[Int.random(in: 0..<transactionTypes.count)]
-            let date10000DaysAgo = Date(timeIntervalSinceNow: -86400 * 10000)
-            let newTransaction = CFTransaction(type: randomTransactionType, changeAmount: Int.random(in: -10000...10000), date: randomDateInRange(startDate: date10000DaysAgo, endDate: Date()), associatedCardNumber: cardNumber)
-            generatedTransactions.append(newTransaction)
-        }
-        return generatedTransactions
+        // TODO: 1A. Implement generateTransactions
+        return []
     }
-    
-    /// Generate a random date between a given interval.
-    /// - Parameters:
-    ///   - startDate: The start date (inclusive).
-    ///   - endDate: The end date (inclusive)
-    /// - Returns: The random ``Date``.
-    private func randomDateInRange(startDate: Date, endDate: Date) -> Date {
-        let timeInterval = TimeInterval.random(in: startDate.timeIntervalSince1970...endDate.timeIntervalSince1970)
-        return Date(timeIntervalSince1970: timeInterval)
-    }
-    
-    //MARK: - IMPLEMENT Cards Management Logic >>>>>>
     
     /// Create and return a new card.
     /// - Card's `cardNumber` uses a function in ``CardManager`` (already implemented)
@@ -109,31 +90,25 @@ import SwiftUI
     /// - Card's `transactions` uses a function in ``CardManager`` with maximum amount of `10` (already implemented)
     /// - Returns: A ``CFCard``.
     func createCard() -> CFCard {
-        //TODO: Implement createCard()
-        return CFCard(cardNumber: "", ownerName: "", balance: 0, transactions: [])
+        // TODO: 1B. Implement createCard
+        return CFCard(cardNumber: "123455678", ownerName: "Oski", balance: 0, transactions: [])
     }
     
-    /// Add a given or new card to CardManager
-    /// - Parameter card: A given ``CFCard`` to add.
-    func addCard(for card: CFCard) {
-        //TODO: Implement addCard()
-    }
-    
-    /// Calculate the total balance across all cards currently in ``CardManager``. For example, if there are 3 cards with balances of -100, 50, and 200, `getTotalBalanceAcrossAllCards` returns 150 (-100 + 50 + 200).
+    /// Calculate the total balance across the given cards. For example, if there are 3 given cards with balances of -100, 50, and 200, `getTotalBalance` returns 150 (-100 + 50 + 200).
     /// - Returns: The total balance across all cards.
-    func getTotalBalanceAcrossAllCards() -> Int {
-        //TODO: Implement getTotalBalanceAcrossAllCards()
-        return 0
+    func getTotalBalance(for cards: [CFCard]) -> Int {
+        // TODO: 1C. Implement getTotalBalance
+        return -1
     }
     
     /// Filters cards into two groups: those with positive and negative balances
     /// - Returns: A ``CFCardBalances`` struct with the appropriate initialized properites (`cardsWithPositiveBalances` & `cardsWithNegativeBalances`)
     func getCardsPositiveAndNegativeBalances() -> CFCardBalances {
-        //TODO: Implement getCardsPositiveAndNegativeBalances()
+        // TODO: 1D. Implement getCardsPositiveAndNegativeBalances
         return CFCardBalances(cardsWithPositiveBalances: [], cardsWithNegativeBalances: [])
     }
     
-    //MARK: - <<<<<< END IMPLEMENTATION
+    // MARK: - <<<<<< END Task 1: Feeling Swifty
     
     /// Given a card, remove it from CardManager.
     /// - Parameter cardToRemove: The card to be removed.
@@ -143,8 +118,10 @@ import SwiftUI
         }
     }
     
-    //MARK: - Credit Card Number Logic
-    //https://gist.github.com/sagaya/1d1be4c7afbca2f681bb2a7d9cb2c882
+    
+    // MARK: - Credit Card Number Logic
+    // https://gist.github.com/sagaya/1d1be4c7afbca2f681bb2a7d9cb2c882
+    
     private func make_random_number(num:Int) -> [Int]{
         var result = [Int]()
         for _ in 0...num {
