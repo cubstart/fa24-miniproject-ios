@@ -44,7 +44,7 @@ struct ManageCardsView: View {
                 }
             }
         }
-        .onAppear {
+        .onChange(of: cardManager.cards, initial: true) {
             withAnimation {
                 filteredCards = cardManager.cards
             }
